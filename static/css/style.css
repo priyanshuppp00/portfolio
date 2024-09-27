@@ -1,7 +1,4 @@
-:root {
-    --clr-primary: #274390;
-}
-  
+
 *,
 *::after,
 *::before {
@@ -14,19 +11,14 @@
 html {
     scroll-behavior: smooth;
 }
+/* full body css*/
 
 body {
-    width: 100%;
+    font-family: 'Arial', sans-serif;
     min-height: 100vh;
     background: radial-gradient(#111111, #0a071a);
-    color: #969292; 
+    color: #969292;
     overflow-x: hidden;
-}
-  
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 .navbar {
@@ -38,30 +30,31 @@ body {
     font-weight: bold;
 }
 
-/* Remove underline from all links */
 nav a {
     font-size: small;
     color: rgb(11, 11, 11);
     margin-right: 10px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .navbar-nav .nav-link.active {
-    color: #969292; 
+    color: #969292;
     padding: 5px 10px;
-    border-bottom: 3px solid #454546; 
+    border-bottom: 3px solid #454546;
     padding-bottom: 3px;
 }
 
-.navbar-nav .nav-link:hover { 
-    color: #ffffff; 
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
     transform: scale(1.05);
 }
 
-.btn-primary {
+.resume-btn {
+    padding: 5 10px;
     background-color: #100a8b;
     border-color: #120c92;
 }
+
 
 h1, h2, h3, h4 {
     text-decoration: none;
@@ -72,104 +65,86 @@ section {
     margin-top: 40px;
 }
 
-.profile-img {
-    width: 350px;
-    height: 350px; 
-    object-fit: cover; 
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.profile-section p {
-    max-width: 600px;
-    margin: 20px auto;
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
 }
 
 .rounded-circle {
     border: 5px solid #104e84;
 }
-
-.about-section {
-    padding: 50px 0;
+.project {
+    background: radial-gradient(#1a1919, #25242c);
+    color: #969292;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
-.about-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
+/* Ensure project-id links are responsive */
+.project-id {
+    font-size: 1rem;
+    color: rgb(91, 91, 91);
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    width: 48%; /* Ensure links are equally wide */
+    text-align: center;
+    margin-bottom: 10px; /* Add space between project and GitHub link */
 }
 
+
+
+/* Hover effect for project-id links */
+.project-id:hover {
+    transform: scale(1.1);
+    color: #969292;
+}
 
 .image-link {
     border-radius: 5px;
-    display: inline-block;
+    display: block;
+    width: 100%; /* Ensure full width for images */
     transition: transform 0.3s ease;
 }
+
+/* Responsive image settings */
 .image-link img {
-    border-radius: 5px; /* Apply border radius */
-    width: 100%; /* Make images responsive */
-    height: 180px; /* Set a specific height for all images */
-    object-fit: cover; /* Ensure images maintain aspect ratio and cover the space */
-    
+    border-radius: 5px;
+    width: 100%;
+    height: auto; /* Let image height scale naturally */
+    object-fit: cover;
 }
 
 .image-link:hover {
     transform: scale(1.15);
 }
-.project {
-    background: radial-gradient(#1a1919, #25242c);
-    color: #969292; /* Text color */
-    padding: 15px;
-    border-radius: 5px;
- 
-}
 
-/* Style for project links */
-.project-id {
-    font-size: 1rem;
-    color: rgb(91, 91, 91); /* Initial link color */
-    padding: 5px 5px; 
-    text-decoration: none; /* Ensure no underline */
-}
-
-/* Hover effect for project links */
-.project-id:hover {
-    transform: scale(1.1); /* Scale effect on hover */
-    color: #969292; /* Color change on hover */
-}
-
-/* Ensure no underline on any links inside .heading */
 .heading a {
     text-decoration: none; /* Remove underline from heading links */
-    color: inherit; 
+    color: inherit;
 }
-
-
 .heading a:hover {
     color: #f8f2f2;
     transform: scale(1.1); 
     font-size: 26px;
 }
 
-/* Center align for any text links */
-.link {
-    text-align: center; 
-}
-
-/* Card styling for individual project */
-.project-card {
-    margin-bottom: 30px; /* Spacing between project cards */
-}
-
-/* Optional: Add hover effect for project card */
-.project:hover {
-    background: radial-gradient(#25242c, #1a1919); /* Darken on hover */
-}
-
-
+/* General skill-box styling */
 .skill-box {
     color: rgb(91, 91, 91);
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 4px 6px #454546;
-    transition: transform 0.3s, box-shadow 0.3s; /* Hover transition */
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,9 +155,10 @@ section {
     box-shadow: 0 6px 20px rgba(156, 89, 89, 0.6);
 }
 
+/* Skill icon and hover effect */
 .skill-box img {
-    display: block;       
-    margin: 0 auto;       
+    display: block;
+    margin: 0 auto;
     width: 50px;
     margin-bottom: 20px;
     transition: all 0.3s;
@@ -192,6 +168,7 @@ section {
     transform: scale(1.2);
 }
 
+/* Skill text styling */
 .skill-box h4 {
     text-align: center;
     margin-top: 10px;
@@ -204,10 +181,9 @@ section {
 }
 
 .skill-box p {
-    font-size: 1rem;
+    font-size: 0.5rem;
     color: #6c757d;
 }
-
 .skill-icon {
     width: 50px; /* Increase icon size */
     height: 50px; /* Maintain aspect ratio */
@@ -215,53 +191,57 @@ section {
 }
 
 .github-icon {
-    background-color: rgb(225, 213, 213); /* Set background color to black */
-    padding: 10px; /* Optional: Add some padding */
-    border-radius: 100%; /* Makes the icon circular */
-    width: 50px; /* Fixed width for the icon */
-    height: 50px;
+    background-color: rgb(225, 213, 213); /* Light background color */
+    padding: 15px; /* Larger padding for better emphasis */
+    border-radius: 50%; /* Circular shape */
+    width: 70px; /* Adjust size for better visibility */
+    height: 70px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    display: inline-block;
+}
+
+.github-icon:hover {
+    transform: scale(1.2); /* Hover effect to enlarge the icon */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
 }
 
 .github-card {
-    position: relative;
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure content stays within the card */
+    border-radius: 15px; /* Smooth corners */
+    overflow: hidden; /* Prevent content from overflowing */
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center; /* Center text in the card */
+    background: radial-gradient(#1a1919, #25242c);/* Light background for card */
+    text-align: center;
 }
 
 .github-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-}
-
-.github-card img {
-    width: 100%; 
-    height: auto; 
-    transition: transform 0.3s;
-}
-
-.github-card:hover img {
-    transform: scale(1.1); /* Zoom effect on image hover */
+    transform: scale(1.05); /* Scale effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
 }
 
 .github-content {
-    padding: 10px; /* Add padding around the content */
+    padding: 20px; /* Add padding inside the card */
 }
 
+.github-btn {
+    padding: 10px 20px; /* Adjust button padding */
+    border-radius: 50px; /* Rounded button */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+}
 
+.github-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.1); /* Enlarge button slightly */
+}
 .custom-input {
-    background-color: #ffff;
+    
     border-radius: 7px;
-    border: 1px solid #474747;
-    color: #7e7b7b;
-}
-
-.custom-input::placeholder {
-    color: #7e7b7b;
+    border: 1px solid #b5aeae;
+   
 }
 
 .custom-input:focus {
-    background-color: #b7b4b4;
+    
     border-color: #292d32;
     box-shadow: 0 0 8px rgba(48, 50, 53, 0.5);
 }
@@ -273,7 +253,7 @@ section {
 }
 
 .contact-item {
-    font-size: 15px;
+    font-size: 16px;
     color: #969292;
     text-decoration: none;
     display: flex;
@@ -283,13 +263,12 @@ section {
 }
 
 .contact-item:hover {
-    color: #ddd7d7;
-    font-size: 12px;
+    color: #eae8e8;
 }
 
 .contact-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease;
     border-radius: 50%; /* Rounded icon look */
     background-color: #fff; /* White background inside the circle */
@@ -299,38 +278,203 @@ section {
     transform: scale(1.2); /* Slight zoom on hover */
 }
 
-.text-white {
-    color: #969292;
-}
 
-
-
-
-
-footer {
-    color: #969292;
-    padding: 10px;
-    text-align: center;
+.footer {
     background: linear-gradient(to right, #1e1e1e 70%, #051c5f);
+    color: #fff; /* White text */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-@media (max-width: 991.98px) { /* Bootstrap's breakpoint for lg */
-    .navbar-nav {
-        flex-direction: column; /* Stack nav items vertically */
-        width: 100%; /* Full width */
-    }
-
-    .navbar-nav .nav-item {
-        text-align: center; /* Center align links */
-    }
+.footer-text {
+    margin: 0;
+    font-size: 16px;
+    color: #ddd;
 }
-
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-    .hero h3 {
-        font-size: 2.5rem;
+    .navbar-nav {
+        font-size: 5rem;
+        text-align: center;
+        
+    }
+    .navbar-nav .nav-link {
+        padding: 10 0px;
+        font-size: 1.5rem; /* Increase font size */
+        font-weight: bold;  /* Make the text bold */
+    }
+    .navbar-toggler {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
     }
 
     .profile-img {
-        max-width: 250px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .resume-btn {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    h2.display-4 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+    .project {
+        text-align: center; /* Center the project content */
+        width: 100%; /* Ensure project takes full width */
+    }
+    .image-link img {
+        height: 200px; /* Set equal height for images on tablet */
+    }
+
+    .project-id {
+        width: 100%; /* Ensure links take full width */
+    }
+    .heading a {
+        font-size: 1.5rem; /* Adjust heading font size for tablets */
+    }
+    .skill-box {
+        padding: 10px;
+    }
+
+    .skill-box h4 {
+        font-size: 10px;
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-main {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-links {
+        flex-direction: row; /* Inline layout */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: center; /* Center the items */
+        gap: 30px; /* Add space between links */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Align icon and text vertically */
+        text-align: center;
+    }
+
+    .contact-links {
+        margin-top: 20px;
+    }
+    .footer-text {
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+}
+
+
+  
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.75rem; /* Further increase font size for smaller screens */
+        font-weight: bold;  /* Keep text bold */
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    h2.display-4 {
+        font-size: 1.75rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .resume-btn {
+        font-size: 1rem;
+    }
+    .heading a {
+        font-size: 1.25rem; /* Further adjust heading font size */
+    }
+
+    .project {
+        width: 100%; /* Make sure project takes full width */
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .project-id {
+        font-size: 0.9rem; /* Slightly reduce font size for mobile */
+        width: 100%; /* Full-width links */
+        margin: 10px 0; /* Vertical spacing between links */
+    }
+
+    .image-link img {
+        height: 150px;
+         /* Reduce image height for mobile */
+    }
+
+    .skill-box {
+        padding: 10px;
+    }
+
+    .skill-box h4 {
+        font-size: 10px;
+    }
+
+    .skill-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-main {
+        max-width: 100%;
+    }
+
+    .contact-links {
+        flex-direction: row; /* Inline layout */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: center; /* Center the items */
+        gap: 30px; /* Add space between links */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Align icon and text vertically */
+        text-align: center;
+    }
+
+    .contact-links {
+        margin-top: 20px;
+    }
+    .footer-text {
+        font-size: 12px; /* Smaller font size for smaller screens */
     }
 }
