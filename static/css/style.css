@@ -101,8 +101,6 @@ section {
     margin-bottom: 10px; /* Add space between project and GitHub link */
 }
 
-
-
 /* Hover effect for project-id links */
 .project-id:hover {
     transform: scale(1.1);
@@ -139,6 +137,12 @@ section {
 }
 
 /* General skill-box styling */
+.skill-container{
+    width: 100%;
+    margin-left: 50px;
+
+}
+
 .skill-box {
     color: rgb(91, 91, 91);
     border-radius: 10px;
@@ -189,10 +193,17 @@ section {
     height: 50px; /* Maintain aspect ratio */
     margin-bottom: 10px;
 }
+.skill-github-icon {
+    background-color: rgb(225, 213, 213); /* Light background color */
+    padding: 5px; /* Larger padding for better emphasis */
+    border-radius: 50%; /* Circular shape */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    display: inline-block;
+}
 
 .github-icon {
     background-color: rgb(225, 213, 213); /* Light background color */
-    padding: 15px; /* Larger padding for better emphasis */
+    padding: 5px; /* Larger padding for better emphasis */
     border-radius: 50%; /* Circular shape */
     width: 70px; /* Adjust size for better visibility */
     height: 70px;
