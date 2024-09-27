@@ -1,6 +1,3 @@
-:root {
-    --clr-primary: #274390;
-}
 
 *,
 *::after,
@@ -10,7 +7,7 @@
     margin: 0;
     font-family: "Nunito", sans-serif;
 }
-
+  
 html {
     scroll-behavior: smooth;
 }
